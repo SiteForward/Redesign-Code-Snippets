@@ -449,7 +449,8 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, items, gl
         autoplaySpeed: 1000,
         dotsSpeed: 1000,
         dots: useSelector,
-        dotsContainer: '.dots-selector .owl-dots'
+        dotsContainer: '.dots-selector .owl-dots',
+        animateOut: 'fadeOut'
     };
 
     //Overwrite Owl Carousel Settings if valid in the options
