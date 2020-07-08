@@ -433,7 +433,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
     var useSelector = options.hasOwnProperty("useSelector") ? options.useSelector : true;
     var selectorStyle = options.hasOwnProperty("selectorStyle") ? options.selectorStyle : 'pill';
     var rotateText = options.hasOwnProperty("rotateText") ? options.rotateText : false;
-    var fadeTransition = (options.fadeTransition === 'true') ? 'fadeOut' : default;
+    var fadeTransition = (options.fadeTransition === 'true') ? 'fadeOut' : 'default';
     var items = options.hasOwnProperty("items") ? options.items : [{
         'img': 'https://static.twentyoverten.com/5b6499146b80a9633b347026/UH-5vE468Ti/iStock-900381778.jpg'
     }, {
