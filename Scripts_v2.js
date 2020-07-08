@@ -453,7 +453,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             dotsSpeed: 1000,
             dots: useSelector,
             dotsContainer: '.dots-selector .owl-dots',
-            animateOut: fadeTransition
+            transitionStyle: 'fade'
         };
     } else {
         var owlCarouselSettings = {
@@ -464,7 +464,8 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             autoplaySpeed: 1000,
             dotsSpeed: 1000,
             dots: useSelector,
-            dotsContainer: '.dots-selector .owl-dots'
+            dotsContainer: '.dots-selector .owl-dots',
+            transitionStyle: false
         };
     }
 
@@ -722,7 +723,7 @@ function initFrenchBlog() {
             .replace(/May/g, "Mai")
             .replace(/June/g, "Juin")
             .replace(/July/g, "Juillet")
-            .replace(/Augest/g, "Août")
+            .replace(/August/g, "Août")
             .replace(/September/g, "Septembre")
             .replace(/October/g, "Octobre")
             .replace(/November/g, "Novembre")
