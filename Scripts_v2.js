@@ -433,7 +433,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
     var useSelector = options.hasOwnProperty("useSelector") ? options.useSelector : true;
     var selectorStyle = options.hasOwnProperty("selectorStyle") ? options.selectorStyle : 'pill';
     var rotateText = options.hasOwnProperty("rotateText") ? options.rotateText : false;
-    var fadeTransition = (options.fadeTransition === 'true') ? 'fadeOut' : 'default';
+    var fadeTransition = (options.fadeTransition === 'true') ? true : false;
     var items = options.hasOwnProperty("items") ? options.items : [{
         'img': 'https://static.twentyoverten.com/5b6499146b80a9633b347026/UH-5vE468Ti/iStock-900381778.jpg'
     }, {
@@ -443,17 +443,30 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
     var y = options.hasOwnProperty("y") ? options.y : 'center';
 
     //Owl Carousel Settings
-    var owlCarouselSettings = {
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
-        dotsSpeed: 1000,
-        dots: useSelector,
-        dotsContainer: '.dots-selector .owl-dots',
-        animateOut: fadeTransition
-    };
+    if (fadeTransition) {
+        var owlCarouselSettings = {
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            dotsSpeed: 1000,
+            dots: useSelector,
+            dotsContainer: '.dots-selector .owl-dots',
+            animateOut: fadeTransition
+        };
+    } else {
+        var owlCarouselSettings = {
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            dotsSpeed: 1000,
+            dots: useSelector,
+            dotsContainer: '.dots-selector .owl-dots'
+        };
+    }
 
     //Overwrite Owl Carousel Settings if valid in the options
     if (options.hasOwnProperty('owlSettings'))
