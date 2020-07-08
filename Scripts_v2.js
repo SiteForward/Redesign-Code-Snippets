@@ -453,7 +453,8 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             dotsSpeed: 1000,
             dots: useSelector,
             dotsContainer: '.dots-selector .owl-dots',
-            animateOut: 'fadeOut'
+            //animateOut: 'fadeOut'
+            transitionStyle: 'fade'
         };
     } else {
         var owlCarouselSettings = {
