@@ -453,7 +453,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             dotsSpeed: 1000,
             dots: useSelector,
             dotsContainer: '.dots-selector .owl-dots',
-            transitionStyle: 'fade'
+            animateOut: 'fadeOut'
         };
     } else {
         var owlCarouselSettings = {
@@ -464,8 +464,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             autoplaySpeed: 1000,
             dotsSpeed: 1000,
             dots: useSelector,
-            dotsContainer: '.dots-selector .owl-dots',
-            transitionStyle: false
+            dotsContainer: '.dots-selector .owl-dots'
         };
     }
 
