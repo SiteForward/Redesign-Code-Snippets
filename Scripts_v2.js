@@ -445,7 +445,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
     //Owl Carousel Settings
     if (fadeTransition) {
         var owlCarouselSettings = {
-            items: 1,
+            //items: 1,
             loop: true,
             autoplay: true,
             autoplayTimeout: 5000,
@@ -454,6 +454,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTrans
             dots: useSelector,
             dotsContainer: '.dots-selector .owl-dots',
             //animateOut: 'fadeOut'
+            singleItem: true,
             transitionStyle: 'fade'
         };
     } else {
