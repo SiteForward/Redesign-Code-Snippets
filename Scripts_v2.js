@@ -397,7 +397,7 @@ function initSlideshow() {
 }
 
 
-function initCarousel(options, useSelector, selectorStyle, rotateText, items, globalStyle, alignY) {
+function initCarousel(options, useSelector, selectorStyle, rotateText, fadeTransition, items, globalStyle, alignY) {
     //Check if options is a string (Supports older websites)
     if (typeof options === 'string' || options instanceof String) {
         options = {
@@ -405,6 +405,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, items, gl
             'useSelector': useSelector,
             'selectorStyle': selectorStyle,
             'rotateText': rotateText,
+            'fadeTransition': fadeTransition,
             'items': items
         }
         //Check if alignY is valid(Supports older websiteS), if so then globalStyle has become alignX
@@ -432,6 +433,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, items, gl
     var useSelector = options.hasOwnProperty("useSelector") ? options.useSelector : true;
     var selectorStyle = options.hasOwnProperty("selectorStyle") ? options.selectorStyle : 'pill';
     var rotateText = options.hasOwnProperty("rotateText") ? options.rotateText : false;
+    var fadeTransition = options.hasOwnProperty("fadeTransition") ? 'fadeOut' : 'slideOutLeft';
     var items = options.hasOwnProperty("items") ? options.items : [{
         'img': 'https://static.twentyoverten.com/5b6499146b80a9633b347026/UH-5vE468Ti/iStock-900381778.jpg'
     }, {
@@ -450,7 +452,7 @@ function initCarousel(options, useSelector, selectorStyle, rotateText, items, gl
         dotsSpeed: 1000,
         dots: useSelector,
         dotsContainer: '.dots-selector .owl-dots',
-        animateOut: 'fadeOut'
+        animateOut: fadeTransition
     };
 
     //Overwrite Owl Carousel Settings if valid in the options
