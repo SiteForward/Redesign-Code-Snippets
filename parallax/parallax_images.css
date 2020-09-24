@@ -1,0 +1,14 @@
+/*----------------------------
+Parallax Hero
+--------------------------------*/
+.page-bg, .divider {
+  overflow: hidden; 
+}
+
+.divider .overlay, .page-bg .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.page-bg .bg, .divider:not(.home-divider) .bg {
+  height: 130%;
+}
